@@ -1,6 +1,6 @@
 {
   "name": "robbers-language-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/hamiltoon/robbers-language-generator",
   "authors": [
     "hamiltoon <john.alm.martensson@gmail.com>"
@@ -14,8 +14,8 @@
     "tests"
   ],
   "devDependencies": {
-    "angular": "1.4.*",
-    "bootstrap": "3.3.*",
-    "jquery": "~2.1.4"
+    "jquery"      : "~2.1.4",
+    "angular"     : "1.4.*",
+    "bootstrap"   : "3.3.*"
   }
 }

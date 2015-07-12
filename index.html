@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<title>Demo | Rövarspråket (Robber's language) generator</title>
+
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+	<script type="text/javascript" src="angular-robbers-language-generator.min.js"></script>
+
+	<script type="text/javascript">
+	
+		angular.module('MyApp', [
+			'ngRobbersLanguageGenerator'
+		])
+		.controller( 'BaseController', [
+			function (  )
+			{
+				this.textToTranslate = 'Jag heter John'
+			}
+		]);
+
+	</script>
+
+</head>
+<body>
+
+	<div class="container" ng-controller="BaseController as BC">
+		
+		<div class="row">
+			
+			<div class="col-xs-12">
+			
+				<h1>Robbers Language Generator</h1>
+				<textarea ng-model="BC.textToTranslate" class="form-control" rows="3"></textarea>
+			
+			</div>
+
+			<div class="col-xs-12">
+	
+				<h2>Original</h2>	
+				<pre>{{ BC.textToTranslate | robbersLanguageGeneratorFilter }}</pre>
+
+			</div>
+
+			<div class="col-xs-12">
+
+				<h2>with an a instead</h2>
+				<pre>{{ BC.textToTranslate | robbersLanguageGeneratorFilter:'a' }}</pre>
+			
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
